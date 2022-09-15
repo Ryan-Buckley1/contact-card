@@ -6,6 +6,7 @@
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "cd server && node server.js",
+    "heroku-prebuild": "npm install --dev",
     "server": "cd server nodemon server.js --ignore client",
     "build": "cd client && npm run build",
     "client": "cd client && npm start",
@@ -14,6 +15,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ryan-Buckley1/contact-card.git"
+  },
+  "engines": {
+    "node": "16.x"
   },
   "keywords": [],
   "author": "",
